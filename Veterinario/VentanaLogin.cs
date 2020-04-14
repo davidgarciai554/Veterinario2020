@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BCrypt.Net;
 
 namespace Veterinario
 {
@@ -20,17 +21,24 @@ namespace Veterinario
 
         private void button1_Click(object sender, EventArgs e)
         {
-            String user = user_Txt.Text;
-            String password = pass_Txt.Text;
-            if (_connection.checkUser(user,password))
+            if (_connection.checkUser(user_Txt.Text, pass_Txt.Text))
             {
                 this.Hide();
+                MessageBox.Show("Se ha logeado bien");
             }
             else
             {
-                error.Text = "Usuario o contraseña incorrectos";
+                MessageBox.Show("Usuario o contraseña incorrectos");
             }
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            
+            VentanaNewUser ventana = new VentanaNewUser();
+            ventana.Show();
+            this.Hide();
         }
     }
 }

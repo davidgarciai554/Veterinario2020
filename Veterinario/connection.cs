@@ -16,33 +16,51 @@ namespace Veterinario
         {
             _connection = new MySqlConnection("Server = 127.0.0.1; Database = veterinario; Uid = root;Pwd=;Port=3306");
         }
-        public Boolean checkUser(string name,string password)
+
+        //David (la base de datos fue creada por Juan)
+        public Boolean checkUser(string DNI,string password)
         {
             try
             {
                 _connection.Open();
-                MySqlCommand consulta = new MySqlCommand("SELECT * FROM usuarios where Name = '" + name + "' AND `password`=" + password, _connection);
+                MySqlCommand consulta = new MySqlCommand("SELECT * FROM usuarios where DNI = @DNI or Name =@DNI" , _connection);
+                consulta.Parameters.AddWithValue("@DNI", DNI);
                 MySqlDataReader resultado = consulta.ExecuteReader();
-                DataTable user = new DataTable();
-                user.Load(resultado);
-                if(user.Rows.Count > 0)
+
+                if (resultado.Read()) 
                 {
-                    return true;
-                }
-                consulta= new MySqlCommand("SELECT * FROM usuarios where DNI = '" + name + "' AND `password`=" + password, _connection);
-                resultado = consulta.ExecuteReader();
-                user = new DataTable();
-                user.Load(resultado);
-                if (user.Rows.Count > 0)
-                {
-                    return true;
+                    string _password = resultado.GetString("password");
+                    if(BCrypt.Net.BCrypt.Verify(password, _password))
+                    {
+                        return true;
+                    }
                 }
                 _connection.Close();
                 return false;
+
             }
             catch (MySqlException e)
             {
-                throw e;
+                return false;
+            }
+        }
+        public String newUser(string name, string DNI, string password)
+        {
+            try
+            {
+                _connection.Open();
+                MySqlCommand consulta = new MySqlCommand
+                    ("INSERT INTO `usuarios` (`DNI`, `Name`, `password`) VALUES('" +DNI+ "', '"+name+ "', '" + password + "')", _connection);
+                consulta.Parameters.AddWithValue("@DNI", DNI);
+                consulta.Parameters.AddWithValue("@Name", name);
+                consulta.Parameters.AddWithValue("@password", password);
+                consulta.ExecuteNonQuery();
+                _connection.Close();
+                return "La operacion se ha relaizado mde forma correcta";
+            }
+            catch (MySqlException e)
+            {
+                return "ERROR";
             }
         }
     }
