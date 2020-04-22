@@ -23,8 +23,10 @@ namespace Veterinario
         {
             if (_connection.checkUser(user_Txt.Text, pass_Txt.Text))
             {
-                this.Hide();
                 MessageBox.Show("Se ha logeado bien");
+                VentanaPrincipal ventana = new VentanaPrincipal();
+                ventana.Show();
+                this.Hide();
             }
             else
             {
@@ -35,10 +37,8 @@ namespace Veterinario
 
         private void button2_Click(object sender, EventArgs e)
         {
-            
             VentanaNewUser ventana = new VentanaNewUser();
             ventana.Show();
-            this.Hide();
         }
     }
 }

@@ -57,6 +57,7 @@ namespace Veterinario
                 consulta.ExecuteNonQuery();
                 _connection.Close();
                 return "La operacion se ha relaizado mde forma correcta";
+                
             }
             catch (MySqlException e)
             {

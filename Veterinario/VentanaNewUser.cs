@@ -21,9 +21,7 @@ namespace Veterinario
         private void button1_Click(object sender, EventArgs e)
         {
             string myHash = BCrypt.Net.BCrypt.HashPassword(DNI_txt.Text, BCrypt.Net.BCrypt.GenerateSalt());
-            _connection.newUser(name_txt.Text, pass_txt.Text,myHash );
-            VentanaLogin ventana = new VentanaLogin();
-            ventana.Show();
+            MessageBox.Show(_connection.newUser(name_txt.Text, pass_txt.Text,myHash ));
             this.Hide();
         }
     }
