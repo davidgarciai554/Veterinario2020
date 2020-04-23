@@ -26,5 +26,11 @@ namespace Veterinario
         {
 
         }
+
+        private void creaConsulta_Click(object sender, EventArgs e)
+        {
+            VentanaConsulta ventanaConsulta = new VentanaConsulta();
+            ventanaConsulta.Show();
+        }
     }
 }

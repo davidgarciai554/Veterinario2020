@@ -37,6 +37,7 @@
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.creaConsulta = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -58,6 +59,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.creaConsulta);
             this.tabPage1.Controls.Add(this.dataGridView1);
             this.tabPage1.ImageIndex = 1;
             this.tabPage1.Location = new System.Drawing.Point(4, 39);
@@ -107,10 +109,20 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(8, 6);
+            this.dataGridView1.Location = new System.Drawing.Point(8, 42);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(645, 303);
+            this.dataGridView1.Size = new System.Drawing.Size(645, 267);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // creaConsulta
+            // 
+            this.creaConsulta.Location = new System.Drawing.Point(9, 7);
+            this.creaConsulta.Name = "creaConsulta";
+            this.creaConsulta.Size = new System.Drawing.Size(111, 29);
+            this.creaConsulta.TabIndex = 1;
+            this.creaConsulta.Text = "Crea Consulta";
+            this.creaConsulta.UseVisualStyleBackColor = true;
+            this.creaConsulta.Click += new System.EventHandler(this.creaConsulta_Click);
             // 
             // VentanaPrincipal
             // 
@@ -137,5 +149,6 @@
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button creaConsulta;
     }
 }
