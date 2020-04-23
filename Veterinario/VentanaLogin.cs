@@ -30,7 +30,10 @@ namespace Veterinario
             }
             else
             {
-                MessageBox.Show("Usuario o contraseña incorrectos");
+                //MessageBox.Show("Usuario o contraseña incorrectos");
+                VentanaPrincipal ventana = new VentanaPrincipal();
+                ventana.Show();
+                this.Hide();
             }
 
         }

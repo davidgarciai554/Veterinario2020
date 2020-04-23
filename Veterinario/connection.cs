@@ -64,5 +64,24 @@ namespace Veterinario
                 return "ERROR";
             }
         }
+
+        //Juan
+        public DataTable getPets()
+        {
+            try
+            {
+                _connection.Open();
+                MySqlCommand consulta = new MySqlCommand("SELECT NumeroHistorialClinico NHC, Nombre_Mascota 'Nombre Mascota', Nombre_Dueño 'Dueño', DNI_Dueño DNI FROM Pacientes", _connection);
+                MySqlDataReader result = consulta.ExecuteReader();
+                DataTable pets = new DataTable();
+                pets.Load(result);
+                _connection.Close();
+                return pets;
+            }
+            catch(MySqlException e)
+            {
+                throw e;
+            }
+        }
     }
 }
