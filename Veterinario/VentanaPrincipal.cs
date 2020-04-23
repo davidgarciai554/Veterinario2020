@@ -26,11 +26,23 @@ namespace Veterinario
         {
 
         }
-
+        //Juan
         private void creaConsulta_Click(object sender, EventArgs e)
         {
             VentanaConsulta ventanaConsulta = new VentanaConsulta();
             ventanaConsulta.Show();
+        }
+        //Juan
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            petName.Text = "Nombre: ";
+            petType.Text = "Animal: ";
+            petNHC.Text = "NHC: ";
+            petHeight.Text = "Altura: ";
+            petWeight.Text = "Peso: ";
+            petReason.Text = "Motivo: ";
+            ownerName.Text = "Nombre dueño: ";
+            DNI.Text = "DNI: ";
         }
     }
 }

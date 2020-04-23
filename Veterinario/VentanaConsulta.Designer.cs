@@ -118,9 +118,9 @@
             this.Height.AutoSize = true;
             this.Height.Location = new System.Drawing.Point(15, 208);
             this.Height.Name = "Height";
-            this.Height.Size = new System.Drawing.Size(33, 13);
+            this.Height.Size = new System.Drawing.Size(34, 13);
             this.Height.TabIndex = 9;
-            this.Height.Text = "altura";
+            this.Height.Text = "Altura";
             // 
             // pet_height
             // 

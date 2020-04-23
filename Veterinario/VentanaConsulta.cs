@@ -26,7 +26,7 @@ namespace Veterinario
         {
 
         }
-
+        //Juan
         private void Send_Click(object sender, EventArgs e)
         {
             Console.WriteLine(pet_name + " " + pet_id + " " + pet_type + " " + pet_NHC + " " + pet_weight + " " + pet_height + " " + owner_name + " " + owner_dni + " " + reason);
