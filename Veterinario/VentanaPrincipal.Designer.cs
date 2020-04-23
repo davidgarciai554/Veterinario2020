@@ -36,15 +36,17 @@
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.tab1_Nombre_Mascota = new System.Windows.Forms.Label();
-            this.tab1_ID_Mascota = new System.Windows.Forms.Label();
+            this.tab1_NHC_Mascota = new System.Windows.Forms.Label();
             this.tab1_Peso = new System.Windows.Forms.Label();
             this.tab1_Altura = new System.Windows.Forms.Label();
             this.tab1_Nombre_Dueño = new System.Windows.Forms.Label();
             this.tab1_TipoAnimal = new System.Windows.Forms.Label();
             this.DNI_Dueño = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -69,7 +71,7 @@
             this.tabPage1.Controls.Add(this.tab1_Nombre_Dueño);
             this.tabPage1.Controls.Add(this.tab1_Altura);
             this.tabPage1.Controls.Add(this.tab1_Peso);
-            this.tabPage1.Controls.Add(this.tab1_ID_Mascota);
+            this.tabPage1.Controls.Add(this.tab1_NHC_Mascota);
             this.tabPage1.Controls.Add(this.tab1_Nombre_Mascota);
             this.tabPage1.ImageIndex = 1;
             this.tabPage1.Location = new System.Drawing.Point(4, 39);
@@ -81,11 +83,12 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.label1);
             this.tabPage2.ImageIndex = 0;
             this.tabPage2.Location = new System.Drawing.Point(4, 39);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(807, 385);
+            this.tabPage2.Size = new System.Drawing.Size(659, 315);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
@@ -95,7 +98,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 39);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(807, 385);
+            this.tabPage3.Size = new System.Drawing.Size(659, 315);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
@@ -116,13 +119,13 @@
             this.tab1_Nombre_Mascota.Text = "Nombre";
             this.tab1_Nombre_Mascota.Click += new System.EventHandler(this.tab1_Nombre_Mascota_Click);
             // 
-            // tab1_ID_Mascota
+            // tab1_NHC_Mascota
             // 
-            this.tab1_ID_Mascota.Location = new System.Drawing.Point(8, 30);
-            this.tab1_ID_Mascota.Name = "tab1_ID_Mascota";
-            this.tab1_ID_Mascota.Size = new System.Drawing.Size(108, 30);
-            this.tab1_ID_Mascota.TabIndex = 1;
-            this.tab1_ID_Mascota.Text = "ID";
+            this.tab1_NHC_Mascota.Location = new System.Drawing.Point(8, 30);
+            this.tab1_NHC_Mascota.Name = "tab1_NHC_Mascota";
+            this.tab1_NHC_Mascota.Size = new System.Drawing.Size(108, 30);
+            this.tab1_NHC_Mascota.TabIndex = 1;
+            this.tab1_NHC_Mascota.Text = "NHC";
             // 
             // tab1_Peso
             // 
@@ -172,6 +175,14 @@
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             // 
+            // label1
+            // 
+            this.label1.Location = new System.Drawing.Point(40, 44);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(100, 31);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "label1";
+            // 
             // VentanaPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -182,6 +193,7 @@
             this.Text = "VentanaPrincipal";
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            this.tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -199,8 +211,9 @@
         private System.Windows.Forms.Label tab1_Nombre_Dueño;
         private System.Windows.Forms.Label tab1_Altura;
         private System.Windows.Forms.Label tab1_Peso;
-        private System.Windows.Forms.Label tab1_ID_Mascota;
+        private System.Windows.Forms.Label tab1_NHC_Mascota;
         private System.Windows.Forms.Label tab1_Nombre_Mascota;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label1;
     }
 }
