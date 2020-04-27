@@ -71,7 +71,7 @@ namespace Veterinario
             try
             {
                 _connection.Open();
-                MySqlCommand consulta = new MySqlCommand("SELECT NumeroHistorialClinico NHC, Nombre_Mascota 'Nombre Mascota', Nombre_Dueño 'Dueño', DNI_Dueño DNI FROM Pacientes", _connection);
+                MySqlCommand consulta = new MySqlCommand("SELECT NumeroHistorialClinico NHC, Nombre_Mascota 'Nombre Mascota', Nombre_Dueño 'Dueño', DNI_Dueño DNI ,ID_Mascota 'ID' FROM pacientes", _connection);
                 MySqlDataReader result = consulta.ExecuteReader();
                 DataTable pets = new DataTable();
                 pets.Load(result);
@@ -83,5 +83,23 @@ namespace Veterinario
                 throw e;
             }
         }
+        public DataTable getAllPets(string nombre)
+        {
+            try
+            {
+                _connection.Open();
+                MySqlCommand consulta = new MySqlCommand("SELECT * FROM pacientes WHERE Nombre_Mascota like '"+ nombre+"'", _connection);
+                MySqlDataReader result = consulta.ExecuteReader();
+                DataTable pets = new DataTable();
+                pets.Load(result);
+                _connection.Close();
+                return pets;
+            }
+            catch (MySqlException e)
+            {
+                throw e;
+            }
+        }
+
     }
 }
