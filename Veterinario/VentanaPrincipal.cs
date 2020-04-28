@@ -16,8 +16,6 @@ namespace Veterinario
         //Juan
         connection myConnection = new connection();
         DataTable pets = new DataTable();
-        string _petName;
-
 
         public VentanaPrincipal()
         {
@@ -36,13 +34,21 @@ namespace Veterinario
         //Juan
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            _petName = dataGridView1.Rows[e.RowIndex].Cells["Nombre Mascota"].Value.ToString();
-            MessageBox.Show(_petName);
-            
-            
+      
+            getInfo(dataGridView1.Rows[e.RowIndex].Cells["Nombre Mascota"].Value.ToString());                 
         }
 
         private void tabPage2_Enter(object sender, EventArgs e)
+        {
+           
+
+        }
+        private Image convierteBlobImagen(byte[] img)
+        {
+            MemoryStream ms = new System.IO.MemoryStream(img);
+            return (Image.FromStream(ms));
+        }
+        public void getInfo(String _petName)
         {
             pets = myConnection.getAllPets(_petName);
             petName.Text = "Nombre: " + pets.Rows[0]["Nombre_Mascota"].ToString();
@@ -54,12 +60,6 @@ namespace Veterinario
             ownerName.Text = "Nombre dueño: " + pets.Rows[0]["Nombre_Dueño"].ToString();
             DNI.Text = "DNI: " + pets.Rows[0]["DNI_Dueño"].ToString();
             pictureBox1.Image = convierteBlobImagen((byte[])pets.Rows[0]["Mascota_IMG"]);
-
-        }
-        private Image convierteBlobImagen(byte[] img)
-        {
-            MemoryStream ms = new System.IO.MemoryStream(img);
-            return (Image.FromStream(ms));
         }
     }
 }

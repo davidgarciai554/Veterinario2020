@@ -32,11 +32,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VentanaPrincipal));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.creaConsulta = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.DNI = new System.Windows.Forms.Label();
             this.ownerName = new System.Windows.Forms.Label();
+            this.petReason = new System.Windows.Forms.Label();
             this.petHeight = new System.Windows.Forms.Label();
             this.petWeight = new System.Windows.Forms.Label();
             this.petNHC = new System.Windows.Forms.Label();
@@ -44,8 +45,6 @@
             this.petName = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.petReason = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -68,7 +67,6 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.creaConsulta);
             this.tabPage1.Controls.Add(this.dataGridView1);
             this.tabPage1.ImageIndex = 1;
             this.tabPage1.Location = new System.Drawing.Point(4, 39);
@@ -78,24 +76,14 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // creaConsulta
-            // 
-            this.creaConsulta.Location = new System.Drawing.Point(9, 7);
-            this.creaConsulta.Name = "creaConsulta";
-            this.creaConsulta.Size = new System.Drawing.Size(111, 29);
-            this.creaConsulta.TabIndex = 1;
-            this.creaConsulta.Text = "Crea Consulta";
-            this.creaConsulta.UseVisualStyleBackColor = true;
-            this.creaConsulta.Click += new System.EventHandler(this.creaConsulta_Click);
-            // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(8, 42);
+            this.dataGridView1.Location = new System.Drawing.Point(8, 6);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(645, 267);
+            this.dataGridView1.Size = new System.Drawing.Size(645, 303);
             this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // tabPage2
             // 
@@ -116,6 +104,15 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.UseVisualStyleBackColor = true;
             this.tabPage2.Enter += new System.EventHandler(this.tabPage2_Enter);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(291, 98);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(362, 211);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 11;
+            this.pictureBox1.TabStop = false;
             // 
             // DNI
             // 
@@ -138,6 +135,16 @@
             this.ownerName.Size = new System.Drawing.Size(129, 18);
             this.ownerName.TabIndex = 9;
             this.ownerName.Text = "Nombre dueño: ";
+            // 
+            // petReason
+            // 
+            this.petReason.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.petReason.Location = new System.Drawing.Point(19, 200);
+            this.petReason.Margin = new System.Windows.Forms.Padding(3, 10, 3, 10);
+            this.petReason.Name = "petReason";
+            this.petReason.Size = new System.Drawing.Size(266, 109);
+            this.petReason.TabIndex = 8;
+            this.petReason.Text = "Motivo: ";
             // 
             // petHeight
             // 
@@ -212,25 +219,6 @@
             this.imageList1.Images.SetKeyName(1, "icons8_dog.ico");
             this.imageList1.Images.SetKeyName(2, "icons8_shopping_cart.ico");
             // 
-            // petReason
-            // 
-            this.petReason.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.petReason.Location = new System.Drawing.Point(19, 200);
-            this.petReason.Margin = new System.Windows.Forms.Padding(3, 10, 3, 10);
-            this.petReason.Name = "petReason";
-            this.petReason.Size = new System.Drawing.Size(266, 109);
-            this.petReason.TabIndex = 8;
-            this.petReason.Text = "Motivo: ";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(291, 98);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(362, 211);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 11;
-            this.pictureBox1.TabStop = false;
-            // 
             // VentanaPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -257,7 +245,6 @@
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button creaConsulta;
         private System.Windows.Forms.Label petType;
         private System.Windows.Forms.Label petName;
         private System.Windows.Forms.Label petHeight;

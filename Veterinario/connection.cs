@@ -88,7 +88,8 @@ namespace Veterinario
             try
             {
                 _connection.Open();
-                MySqlCommand consulta = new MySqlCommand("SELECT * FROM pacientes WHERE Nombre_Mascota like '"+ nombre+"'", _connection);
+                MySqlCommand consulta = new MySqlCommand("SELECT * FROM pacientes WHERE Nombre_Mascota like @nombre", _connection);
+                consulta.Parameters.AddWithValue("@nombre", nombre);
                 MySqlDataReader result = consulta.ExecuteReader();
                 DataTable pets = new DataTable();
                 pets.Load(result);
@@ -100,6 +101,7 @@ namespace Veterinario
                 throw e;
             }
         }
+        
 
     }
 }
