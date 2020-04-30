@@ -23,13 +23,15 @@ namespace Veterinario
             dataGridView1.DataSource = myConnection.getPets();
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.ColumnHeader;
             dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.None;
+            getInfo(dataGridView1.Rows[0].Cells["Nombre Mascota"].Value.ToString());
         }
 
         //Juan
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-      
-            getInfo(dataGridView1.Rows[e.RowIndex].Cells["Nombre Mascota"].Value.ToString());                 
+            getInfo(dataGridView1.Rows[e.RowIndex].Cells["Nombre Mascota"].Value.ToString());
+            tabPage2.Show();
+            tabControl1.SelectedTab = tabPage2;
         }
 
         private void tabPage2_Enter(object sender, EventArgs e)
