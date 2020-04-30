@@ -57,5 +57,11 @@ namespace Veterinario
             DNI.Text = "DNI: " + pets.Rows[0]["DNI_Dueño"].ToString();
             pictureBox1.Image = convierteBlobImagen((byte[])pets.Rows[0]["Mascota_IMG"]);
         }
+
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            if (e.CloseReason == CloseReason.WindowsShutDown) return;
+            Application.Exit();
+        }
     }
 }
