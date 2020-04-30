@@ -21,7 +21,7 @@ namespace Veterinario
         {
             InitializeComponent();
             dataGridView1.DataSource = myConnection.getPets();
-            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.None;
 
             dataGridView2.DataSource = myConnection.shop();
@@ -47,13 +47,14 @@ namespace Veterinario
             petName.Text = "Nombre: " + pets.Rows[0]["Nombre_Mascota"].ToString();
             petType.Text = "Animal: " + pets.Rows[0]["Animal_Mascota"].ToString();
             petNHC.Text = "NHC: " + pets.Rows[0]["NumeroHistorialClinico"].ToString();
-            petHeight.Text = "Altura: " + pets.Rows[0]["Altura_Mascota"].ToString();
-            petWeight.Text = "Peso: " + pets.Rows[0]["Peso_Mascota"].ToString();
+            petHeight.Text = "Altura: " + pets.Rows[0]["Altura_Mascota"].ToString()+" cm";
+            petWeight.Text = "Peso: " + pets.Rows[0]["Peso_Mascota"].ToString()+" Kg";
             petReason.Text = "Motivo: " + pets.Rows[0]["Motivo_Asistencia"].ToString();
             ownerName.Text = "Nombre dueño: " + pets.Rows[0]["Nombre_Dueño"].ToString();
             DNI.Text = "DNI: " + pets.Rows[0]["DNI_Dueño"].ToString();
             pictureBox1.Image = convierteBlobImagen((byte[])pets.Rows[0]["Mascota_IMG"]);
         }
+        //David
         public void getShopInfo(String id)
         {
             pets = myConnection.shopProducts(id);
@@ -62,6 +63,7 @@ namespace Veterinario
             productDescription.Text = pets.Rows[0]["Descripcion"].ToString();
             pictureBox2.Image = convierteBlobImagen((byte[])pets.Rows[0]["IMG"]);
         }
+        //Juan
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
             if (e.CloseReason == CloseReason.WindowsShutDown) return;

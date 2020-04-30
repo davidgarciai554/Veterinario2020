@@ -107,7 +107,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "VentanaNewUser";
-            this.Text = "VentanaNewUser";
+            this.Text = "Nuevo usuario";
             this.ResumeLayout(false);
             this.PerformLayout();
 

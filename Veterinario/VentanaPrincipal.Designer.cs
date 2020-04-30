@@ -88,9 +88,10 @@
             // 
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(8, 6);
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(3, 3);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(645, 303);
+            this.dataGridView1.Size = new System.Drawing.Size(662, 324);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -125,28 +126,28 @@
             // DNI
             // 
             this.DNI.AutoSize = true;
-            this.DNI.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DNI.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DNI.Location = new System.Drawing.Point(327, 48);
             this.DNI.Margin = new System.Windows.Forms.Padding(3, 10, 3, 10);
             this.DNI.Name = "DNI";
-            this.DNI.Size = new System.Drawing.Size(46, 18);
+            this.DNI.Size = new System.Drawing.Size(41, 18);
             this.DNI.TabIndex = 10;
             this.DNI.Text = "DNI: ";
             // 
             // ownerName
             // 
             this.ownerName.AutoSize = true;
-            this.ownerName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ownerName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ownerName.Location = new System.Drawing.Point(327, 13);
             this.ownerName.Margin = new System.Windows.Forms.Padding(3, 10, 3, 10);
             this.ownerName.Name = "ownerName";
-            this.ownerName.Size = new System.Drawing.Size(129, 18);
+            this.ownerName.Size = new System.Drawing.Size(115, 18);
             this.ownerName.TabIndex = 9;
             this.ownerName.Text = "Nombre dueño: ";
             // 
             // petReason
             // 
-            this.petReason.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.petReason.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.petReason.Location = new System.Drawing.Point(19, 200);
             this.petReason.Margin = new System.Windows.Forms.Padding(3, 10, 3, 10);
             this.petReason.Name = "petReason";
@@ -157,55 +158,55 @@
             // petHeight
             // 
             this.petHeight.AutoSize = true;
-            this.petHeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.petHeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.petHeight.Location = new System.Drawing.Point(19, 162);
             this.petHeight.Margin = new System.Windows.Forms.Padding(3, 10, 3, 10);
             this.petHeight.Name = "petHeight";
-            this.petHeight.Size = new System.Drawing.Size(61, 18);
+            this.petHeight.Size = new System.Drawing.Size(53, 18);
             this.petHeight.TabIndex = 7;
             this.petHeight.Text = "Altura: ";
             // 
             // petWeight
             // 
             this.petWeight.AutoSize = true;
-            this.petWeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.petWeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.petWeight.Location = new System.Drawing.Point(19, 124);
             this.petWeight.Margin = new System.Windows.Forms.Padding(3, 10, 3, 10);
             this.petWeight.Name = "petWeight";
-            this.petWeight.Size = new System.Drawing.Size(57, 18);
+            this.petWeight.Size = new System.Drawing.Size(51, 18);
             this.petWeight.TabIndex = 6;
             this.petWeight.Text = "Peso: ";
             // 
             // petNHC
             // 
             this.petNHC.AutoSize = true;
-            this.petNHC.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.petNHC.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.petNHC.Location = new System.Drawing.Point(19, 86);
             this.petNHC.Margin = new System.Windows.Forms.Padding(3, 10, 3, 10);
             this.petNHC.Name = "petNHC";
-            this.petNHC.Size = new System.Drawing.Size(54, 18);
+            this.petNHC.Size = new System.Drawing.Size(49, 18);
             this.petNHC.TabIndex = 5;
             this.petNHC.Text = "NHC: ";
             // 
             // petType
             // 
             this.petType.AutoSize = true;
-            this.petType.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.petType.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.petType.Location = new System.Drawing.Point(19, 48);
             this.petType.Margin = new System.Windows.Forms.Padding(3, 10, 3, 10);
             this.petType.Name = "petType";
-            this.petType.Size = new System.Drawing.Size(68, 18);
+            this.petType.Size = new System.Drawing.Size(60, 18);
             this.petType.TabIndex = 4;
             this.petType.Text = "Animal: ";
             // 
             // petName
             // 
             this.petName.AutoSize = true;
-            this.petName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.petName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.petName.Location = new System.Drawing.Point(19, 15);
             this.petName.Margin = new System.Windows.Forms.Padding(3, 10, 3, 10);
             this.petName.Name = "petName";
-            this.petName.Size = new System.Drawing.Size(78, 18);
+            this.petName.Size = new System.Drawing.Size(70, 18);
             this.petName.TabIndex = 0;
             this.petName.Text = "Nombre: ";
             // 
@@ -237,7 +238,7 @@
             // productPrice
             // 
             this.productPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.productPrice.Location = new System.Drawing.Point(320, 85);
+            this.productPrice.Location = new System.Drawing.Point(562, 85);
             this.productPrice.Name = "productPrice";
             this.productPrice.Size = new System.Drawing.Size(100, 39);
             this.productPrice.TabIndex = 3;
@@ -245,7 +246,7 @@
             // 
             // productDescription
             // 
-            this.productDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.productDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.productDescription.Location = new System.Drawing.Point(6, 163);
             this.productDescription.Name = "productDescription";
             this.productDescription.Size = new System.Drawing.Size(320, 151);
@@ -253,10 +254,10 @@
             // 
             // productName
             // 
-            this.productName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.productName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.productName.Location = new System.Drawing.Point(320, 21);
             this.productName.Name = "productName";
-            this.productName.Size = new System.Drawing.Size(297, 39);
+            this.productName.Size = new System.Drawing.Size(297, 64);
             this.productName.TabIndex = 1;
             this.productName.Text = "Nombre: ";
             // 
@@ -286,7 +287,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "VentanaPrincipal";
-            this.Text = "VentanaPrincipal";
+            this.Text = "Veterinario";
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

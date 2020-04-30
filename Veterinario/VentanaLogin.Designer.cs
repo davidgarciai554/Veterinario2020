@@ -93,6 +93,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox1.Image = global::Veterinario.Properties.Resources.gato;
             this.pictureBox1.Location = new System.Drawing.Point(13, 13);
             this.pictureBox1.Name = "pictureBox1";
@@ -130,7 +131,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "VentanaLogin";
-            this.Text = "Form1";
+            this.Text = "Login Veterinario";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
