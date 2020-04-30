@@ -44,12 +44,20 @@
             this.petType = new System.Windows.Forms.Label();
             this.petName = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.productPrice = new System.Windows.Forms.Label();
+            this.productDescription = new System.Windows.Forms.Label();
+            this.productName = new System.Windows.Forms.Label();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -62,7 +70,7 @@
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.Padding = new System.Drawing.Point(0, 0);
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(667, 358);
+            this.tabControl1.Size = new System.Drawing.Size(676, 373);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -72,7 +80,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 39);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(659, 315);
+            this.tabPage1.Size = new System.Drawing.Size(668, 330);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
@@ -101,10 +109,9 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 39);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(659, 315);
+            this.tabPage2.Size = new System.Drawing.Size(668, 330);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.UseVisualStyleBackColor = true;
-            this.tabPage2.Enter += new System.EventHandler(this.tabPage2_Enter);
             // 
             // pictureBox1
             // 
@@ -204,13 +211,54 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.dataGridView2);
+            this.tabPage3.Controls.Add(this.pictureBox2);
+            this.tabPage3.Controls.Add(this.productPrice);
+            this.tabPage3.Controls.Add(this.productDescription);
+            this.tabPage3.Controls.Add(this.productName);
+            this.tabPage3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPage3.ImageIndex = 2;
             this.tabPage3.Location = new System.Drawing.Point(4, 39);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(659, 315);
+            this.tabPage3.Size = new System.Drawing.Size(668, 330);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Location = new System.Drawing.Point(420, 127);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(221, 187);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 4;
+            this.pictureBox2.TabStop = false;
+            // 
+            // productPrice
+            // 
+            this.productPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.productPrice.Location = new System.Drawing.Point(320, 85);
+            this.productPrice.Name = "productPrice";
+            this.productPrice.Size = new System.Drawing.Size(100, 39);
+            this.productPrice.TabIndex = 3;
+            this.productPrice.Text = "     €";
+            // 
+            // productDescription
+            // 
+            this.productDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.productDescription.Location = new System.Drawing.Point(6, 163);
+            this.productDescription.Name = "productDescription";
+            this.productDescription.Size = new System.Drawing.Size(320, 151);
+            this.productDescription.TabIndex = 2;
+            // 
+            // productName
+            // 
+            this.productName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.productName.Location = new System.Drawing.Point(320, 21);
+            this.productName.Name = "productName";
+            this.productName.Size = new System.Drawing.Size(297, 39);
+            this.productName.TabIndex = 1;
+            this.productName.Text = "Nombre: ";
             // 
             // imageList1
             // 
@@ -219,6 +267,15 @@
             this.imageList1.Images.SetKeyName(0, "icons8_bandage.ico");
             this.imageList1.Images.SetKeyName(1, "icons8_dog.ico");
             this.imageList1.Images.SetKeyName(2, "icons8_shopping_cart.ico");
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(3, 3);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(306, 133);
+            this.dataGridView2.TabIndex = 5;
+            this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellClick);
             // 
             // VentanaPrincipal
             // 
@@ -236,6 +293,9 @@
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.tabPage3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -257,5 +317,10 @@
         private System.Windows.Forms.Label ownerName;
         private System.Windows.Forms.Label petReason;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label productPrice;
+        private System.Windows.Forms.Label productDescription;
+        private System.Windows.Forms.Label productName;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.DataGridView dataGridView2;
     }
 }

@@ -101,7 +101,41 @@ namespace Veterinario
                 throw e;
             }
         }
-        
-
+        public DataTable shop()
+        {
+            try
+            {
+                _connection.Open();
+                MySqlCommand consulta = new MySqlCommand("SELECT Nombre Producto ,ID  FROM productos", _connection);
+                
+                MySqlDataReader result = consulta.ExecuteReader();
+                DataTable pets = new DataTable();
+                pets.Load(result);
+                _connection.Close();
+                return pets;
+            }
+            catch (MySqlException e)
+            {
+                throw e;
+            }
+        }
+        public DataTable shopProducts(string ID)
+        {
+            try
+            {
+                _connection.Open();
+                MySqlCommand consulta = new MySqlCommand("SELECT * FROM productos where ID = @ID", _connection);
+                consulta.Parameters.AddWithValue("@ID", ID);
+                MySqlDataReader result = consulta.ExecuteReader();
+                DataTable pets = new DataTable();
+                pets.Load(result);
+                _connection.Close();
+                return pets;
+            }
+            catch (MySqlException e)
+            {
+                throw e;
+            }
+        }
     }
 }

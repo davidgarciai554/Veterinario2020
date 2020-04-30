@@ -23,28 +23,25 @@ namespace Veterinario
             dataGridView1.DataSource = myConnection.getPets();
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.ColumnHeader;
             dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.None;
-            getInfo(dataGridView1.Rows[0].Cells["Nombre Mascota"].Value.ToString());
+
+            dataGridView2.DataSource = myConnection.shop();
+            dataGridView2.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dataGridView2.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.None;       
         }
 
         //Juan
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            getInfo(dataGridView1.Rows[e.RowIndex].Cells["Nombre Mascota"].Value.ToString());
+            getPetInfo(dataGridView1.Rows[e.RowIndex].Cells["Nombre Mascota"].Value.ToString());
             tabPage2.Show();
             tabControl1.SelectedTab = tabPage2;
-        }
-
-        private void tabPage2_Enter(object sender, EventArgs e)
-        {
-           
-
         }
         private Image convierteBlobImagen(byte[] img)
         {
             MemoryStream ms = new System.IO.MemoryStream(img);
             return (Image.FromStream(ms));
         }
-        public void getInfo(String _petName)
+        public void getPetInfo(String _petName)
         {
             pets = myConnection.getAllPets(_petName);
             petName.Text = "Nombre: " + pets.Rows[0]["Nombre_Mascota"].ToString();
@@ -57,11 +54,23 @@ namespace Veterinario
             DNI.Text = "DNI: " + pets.Rows[0]["DNI_Dueño"].ToString();
             pictureBox1.Image = convierteBlobImagen((byte[])pets.Rows[0]["Mascota_IMG"]);
         }
-
+        public void getShopInfo(String id)
+        {
+            pets = myConnection.shopProducts(id);
+            productName.Text = "Producto: " + pets.Rows[0]["Nombre"].ToString();
+            productPrice.Text = pets.Rows[0]["Precio"].ToString()+" €";
+            productDescription.Text = pets.Rows[0]["Descripcion"].ToString();
+            pictureBox2.Image = convierteBlobImagen((byte[])pets.Rows[0]["IMG"]);
+        }
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
             if (e.CloseReason == CloseReason.WindowsShutDown) return;
             Application.Exit();
+        }
+
+        private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            getShopInfo(dataGridView2.Rows[e.RowIndex].Cells["ID"].Value.ToString());
         }
     }
 }
