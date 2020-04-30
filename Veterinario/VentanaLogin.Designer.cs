@@ -127,6 +127,8 @@
             this.Controls.Add(this.pass_Txt);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.user_Txt);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "VentanaLogin";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
